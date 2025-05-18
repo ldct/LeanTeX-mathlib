@@ -9,8 +9,11 @@ package "LeanTeX_Mathlib" where
     ⟨`autoImplicit, false⟩
   ]
 
-require "leanprover-community" / "mathlib"
-require "kmill" / "LeanTeX"
+require "leanprover-community" / "mathlib" @ git "v4.19.0"
+require "ldct" / "LeanTeX"
+  from git "https://github.com/ldct/LeanTeX"@"main"
+require "leanprover-community" / "batteries" @ git "v4.19.0"
+require "leanprover-community" / "importGraph" @ git "v4.19.0"
 
 @[default_target]
 lean_lib «LeanTeXMathlib» where
